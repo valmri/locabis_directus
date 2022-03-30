@@ -1,8 +1,8 @@
 <body>
 
 <div class="contenu">
-    <div class="connexion">
-        <div class="enteteConnexion">
+    <div class="page">
+        <div class="entetePage">
             <h1>Page de connexion</h1>
         </div>
 

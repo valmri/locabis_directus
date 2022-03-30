@@ -41,8 +41,10 @@ h1 {
     transition: 0.5s;
 }
 
-.logo {
+.logo > a{
     font-size: 20px;
+    text-decoration: none;
+    color: #fff;
 }
 
 .contenu {
@@ -50,14 +52,14 @@ h1 {
     justify-content: center;
 }
 
-.connexion {
+.page {
     margin: 100px;
     padding: 10px 20px;
     border: 1px solid #241F14;
     width: 50%;
 }
 
-.enteteConnexion {
+.entetePage {
     border-bottom: 1px solid #241F14;
 }
 
