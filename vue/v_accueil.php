@@ -64,3 +64,4 @@
         </div>
 
     </div>
+    <script src="./assets/js/ajax/locations.js"></script>
