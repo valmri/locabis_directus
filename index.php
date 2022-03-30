@@ -12,7 +12,11 @@ if(isset($_GET['page']) && !empty($_GET['page'])) {
     $controleur = controleur($page);
 
     require_once './controleur/'.$controleur;
-}
 
+} else {
+
+    require_once './vue/v_accueil.php';
+
+}
 
 require_once './vue/elements/footer.php';
