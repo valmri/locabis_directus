@@ -6,8 +6,12 @@ body {
     padding: 0px;
 }
 
-h1, h2, h3, p, a, span {
+h1, h2, h3, p, a, span, label, input[type='text'], button {
     font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    font-size: 25px;
 }
 
 .menu {
@@ -32,6 +36,35 @@ h1, h2, h3, p, a, span {
     border-radius: 10px;
 }
 
+.boutonMenu:hover {
+    background-color: rgba(255, 255, 255, 0.295);
+    transition: 0.5s;
+}
+
 .logo {
     font-size: 20px;
+}
+
+.contenu {
+    display: flex;
+    justify-content: center;
+}
+
+.connexion {
+    margin: 100px;
+    padding: 10px 20px;
+    border: 1px solid #241F14;
+    width: 50%;
+}
+
+.enteteConnexion {
+    border-bottom: 1px solid #241F14;
+}
+
+.inputConnexion {
+    margin: 10px 0px;
+}
+
+.inputConnexion > input {
+    width: 50%;
 }
