@@ -50,16 +50,26 @@ h1 {
 .contenu {
     display: flex;
     justify-content: center;
+    margin: 50px 100px;
 }
 
 .page {
-    margin: 100px;
-    padding: 10px 20px;
-    border: 1px solid #241F14;
-    width: 50%;
+    width: 100%;
 }
 
-.entetePage {
+.infos {
+    width: 30%;
+}
+
+.page,
+.infos {
+    margin: 0px 10px;
+    padding: 10px 20px;
+    border: 1px solid #241F14;
+}
+
+.entetePage,
+.enteteInfo {
     border-bottom: 1px solid #241F14;
 }
 
@@ -69,4 +79,19 @@ h1 {
 
 .inputConnexion > input {
     width: 50%;
+}
+
+.contenuCarte {
+    display: flex;
+}
+
+.carteLoc {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid #241F14;
+    width: 50%;
+}
+
+.carteLoc_contenu {
+    line-height: 10px;
 }
