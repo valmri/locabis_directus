@@ -4,10 +4,7 @@
         <nav class="navigation">
             <ul>
                 <li>
-                    <a href="#">Accueil</a>
-                </li>
-                <li>
-                    <a href="#">Connexion</a>
+                    <a class="boutonMenu" href="#">Connexion</a>
                 </li>
             </ul>
         </nav>
