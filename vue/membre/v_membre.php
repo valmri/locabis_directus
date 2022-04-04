@@ -11,9 +11,9 @@
                 </div>
 
                 <div class="contenuInfo">
-                    <p><span class="donneeMembre">Identité :</span> <?php echo $infos->prenom.' '.$infos->nom; ?></p>
-                    <p><span class="donneeMembre">Adresse-mel :</span> <?php echo $infos->identifiant; ?></p>
-                    <p><span class="donneeMembre">Dernière connexion :</span> <?php echo $derniereConnexion; ?></p>
+                    <p><span class="titreInfo">Identité :</span> <?php echo $infos->prenom.' '.$infos->nom; ?></p>
+                    <p><span class="titreInfo">Adresse-mel :</span> <?php echo $infos->identifiant; ?></p>
+                    <p><span class="titreInfo">Dernière connexion :</span> <?php echo $derniereConnexion; ?></p>
                 </div>
 
             </div>
@@ -29,7 +29,7 @@
             <div class="contenuPage">
 
                 <p>Vous n'avez réaliser aucunes réservations.</p>
-                
+
             </div>
 
         </div>
