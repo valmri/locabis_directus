@@ -11,7 +11,7 @@
                 </li>
                 <?php else :?>
                     <li>
-                        <a class="boutonMenu" href="?page=reservation">Réserver</a>
+                        <a class="boutonMenu" href="?page=membre">Espace membre</a>
                     </li>
                     <li>
                         <a class="boutonMenu" href="?page=deconnexion">Déconnexion</a>

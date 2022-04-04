@@ -24,7 +24,7 @@ if(
         $_SESSION['motDePasse'] = $motDePasse;
         $_SESSION['jeton'] = bin2hex(openssl_random_pseudo_bytes(6));
         
-        header('Location:?page=reservation');
+        header('Location:?page=membre');
 
     } else {
         $msgErreur = "Identifant ou mot de passe incorrect !";
