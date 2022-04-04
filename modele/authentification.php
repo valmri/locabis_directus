@@ -54,3 +54,19 @@ function estConnecte() {
     return $resultat;
 
 }
+
+function getInfosUtilisateur(string $identifiant) {
+
+    $resultat = false;
+    
+    $infosUtilisateur = requete("http://172.24.2.143:8055/items/utilisateur?fields=identifiant,prenom,nom,derniere_connexion&[filter][identifiant][_eq]=".$identifiant);
+
+    if(!empty($infosUtilisateur->data)) {
+
+        $resultat = $infosUtilisateur->data[0];
+
+    }
+
+    return $resultat;
+
+}

@@ -107,3 +107,7 @@ h1 {
     background-color: rgb(172, 25, 25);
     color: #fff;
 }
+
+.donneeMembre {
+    font-weight: 500;
+}
