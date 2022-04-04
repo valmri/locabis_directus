@@ -6,6 +6,8 @@ function controleur(string $page) {
     $actions = array();
     $actions['accueil'] = 'c_accueil.php';
     $actions['connexion'] = 'c_connexion.php';
+    $actions['reservation'] = 'membre/c_reservation.php';
+    $actions['deconnexion'] = 'membre/c_deconnexion.php';
     
     if(array_key_exists($page, $actions)) {
 

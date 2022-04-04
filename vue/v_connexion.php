@@ -6,6 +6,13 @@
             <h1>Page de connexion</h1>
         </div>
 
+        <?php if (isset($msgErreur)) :?>
+            <div class="msgErreur">
+                <i class="las la-exclamation-triangle"></i>
+                <p><?php echo $msgErreur; ?></p>
+            </div>
+        <?php endif; ?>
+
         <form action="#" method="post">
 
             <div class="inputConnexion">
