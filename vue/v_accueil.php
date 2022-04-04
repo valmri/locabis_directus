@@ -43,7 +43,7 @@
                         <span class="infoLoca">
                             <i class="las la-map-marker"></i><?php echo $laLocation->idimm->ville; ?>
                         </span>
-                        <a href="?page=location&id=<?php echo $laLocation->id; ?>">Consulter</a>
+                        <a href="?page=location&id=<?php echo $laLocation->id; ?>" class="bouton">Consulter</a>
                     </div>
                 </div>
                 

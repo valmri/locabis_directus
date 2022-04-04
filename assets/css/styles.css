@@ -111,3 +111,12 @@ h1 {
 .titreInfo {
     font-weight: 500;
 }
+
+.bouton {
+    display: flex;
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid #241F14;
+    justify-content: center;
+    text-decoration: none;
+}
