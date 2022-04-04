@@ -24,42 +24,37 @@
                 <h1>Nos locations</h1>
             </div>
 
+            <?php foreach ($lesLocations->data as $laLocation) :?>
+
+            <?php if ($nbCase === 0) :?>
             <div class="contenuCarte">
+            <?php endif; ?>
 
                 <div class="carteLoc">
                     <div class="carteLoc_entete">
-                        <img src="https://www.maisonsclairlogis.fr/wp-content/uploads/maison-contemporaine_onyx-version-nuit.jpg" width="100%" alt="">
+                        <?php if ($laLocation->image != null) :?>
+                        <img src="http://172.24.2.143:8055/assets/<?php echo $laLocation->image ?>?width=400&height=300" alt="<?php echo $laLocation->idtype->libtype ?>">
+                        <?php else :?>
+                        <img src="./assets/img/appart.jpg" width="100%" alt="<?php echo $laLocation->idtype->libtype; ?>">
+                        <?php endif; ?>
                     </div>
                     <div class="carteLoc_contenu">
-                        <h2>Titre</h2>
-                        <p>Lieu</p>
-                        <p>Prix</p>
+                        <h2><?php echo $laLocation->idtype->libtype; ?></h2>
+                        <span class="infoLoca">
+                            <i class="las la-map-marker"></i><?php echo $laLocation->idimm->ville; ?>
+                        </span>
                     </div>
                 </div>
-
-                <div class="carteLoc">
-                    <div class="carteLoc_entete">
-                        <img src="https://www.maisonsclairlogis.fr/wp-content/uploads/maison-contemporaine_onyx-version-nuit.jpg" width="100%" alt="">
-                    </div>
-                    <div class="carteLoc_contenu">
-                        <h2>Titre</h2>
-                        <p>Lieu</p>
-                        <p>Prix</p>
-                    </div>
-                </div>
-
-                <div class="carteLoc">
-                    <div class="carteLoc_entete">
-                        <img src="https://www.maisonsclairlogis.fr/wp-content/uploads/maison-contemporaine_onyx-version-nuit.jpg" width="100%" alt="">
-                    </div>
-                    <div class="carteLoc_contenu">
-                        <h2>Titre</h2>
-                        <p>Lieu</p>
-                        <p>Prix</p>
-                    </div>
-                </div>
-
+                
+            <?php $nbCase++; ?>
+            <?php if ($nbCase === 3) :?>
             </div>
+            <?php $nbCase = 0;?>
+            <?php endif; ?>
+            
+            
+
+            <?php endforeach; ?>
 
         </div>
 
