@@ -14,6 +14,11 @@
                     <p><span class="titreInfo">Adresse :</span> <?php echo $laLocation->idimm->adimm; ?> </p>
                     <p><span class="titreInfo">Ville :</span> <?php echo $laLocation->idimm->ville; ?> </p>
                     <p><span class="titreInfo">Prix :</span> <?php echo $laLocation->idtype->tariflocbase; ?>€</p>
+                    <?php if ($laLocation->idimm->ascensseur) : ?>
+                    <p><span class="titreInfo">Ascenseur :</span> Oui</p>
+                    <?php else : ?>
+                        <p><span class="titreInfo">Ascenseur :</span> Non</p>
+                    <?php endif; ?>
                 </div>
 
             </div>
