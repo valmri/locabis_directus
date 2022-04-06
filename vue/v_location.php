@@ -19,12 +19,16 @@
                     <?php else : ?>
                         <p><span class="titreInfo">Ascenseur :</span> Non</p>
                     <?php endif; ?>
+
+                    <?php if (estConnecte()) :?>
+                        <a href="?page=reserver&loc=<?php echo $laLocation->id; ?>" class="bouton">Louer</a>
+                    <?php endif; ?>
                 </div>
 
             </div>
 
         </aside>
-    
+        
         <div class="page">
 
             <div class="entetePage">
@@ -33,9 +37,7 @@
             </div>
 
             <div class="contenuPage">
-
                 <p><?php echo $laLocation->descriptif; ?></p>
-                
             </div>
 
         </div>

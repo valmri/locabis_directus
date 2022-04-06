@@ -11,10 +11,16 @@ if(
     $idLocation = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
     // Récupération des informations de la location
-    $resultat = getLocationById($idLocation);
-    $laLocation = $resultat->data[0];
+    $laLocation = getLocationById($idLocation);
+
+    if($laLocation) {
+        require_once './vue/v_location.php';
+    } else {
+        $titreErreur = "Location innexistante !";
+        $msgErreur = "La location recherché est innexistante ou a été retiré.";
+        require_once './vue/elements/erreur.php';
+    }
     
-    require_once './vue/v_location.php';
 
 } else {
     require_once './vue/v_accueil.php';

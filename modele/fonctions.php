@@ -37,8 +37,15 @@ function getLocations() {
 }
 
 function getLocationById(int $idLocation) {
-    $recherche = "http://172.24.2.143:8055/items/appartement?fields=image,descriptif,idimm.adimm,idimm.ville,idimm.ascensseur,idtype.libtype,idtype.tariflocbase&[filter][id][_eq]=".$idLocation;
-    $resultat = requete($recherche);
+    $recherche = "http://172.24.2.143:8055/items/appartement?fields=id,image,descriptif,idimm.adimm,idimm.ville,idimm.ascensseur,idtype.libtype,idtype.tariflocbase&[filter][id][_eq]=".$idLocation;
+    $reponse = requete($recherche);
+
+    if(!empty($reponse->data)) {
+        $resultat = $reponse->data[0];
+    } else {
+        $resultat = false;
+    }
+
     return $resultat;
 }
 
