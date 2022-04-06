@@ -41,3 +41,15 @@ function getLocationById(int $idLocation) {
     $resultat = requete($recherche);
     return $resultat;
 }
+
+function getNombreLocations() {
+    $recherche = "http://172.24.2.143:8055/items/appartement?meta=total_count&limit=0";
+    $resultat = requete($recherche);
+    return $resultat->meta;
+}
+
+function getPage(int $premierePage, int $locationParPage) {
+    $recherche = "http://172.24.2.143:8055/items/appartement?fields=id,image,idtype.libtype,idimm.ville&page=".$premierePage."&limit=".$locationParPage;
+    $resultat = requete($recherche);
+    return $resultat->data;
+}
