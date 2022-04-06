@@ -60,3 +60,9 @@ function getPage(int $premierePage, int $locationParPage) {
     $resultat = requete($recherche);
     return $resultat->data;
 }
+
+// TODO : Ajout fonction permettant d'ajouter une reservation
+function addRservation(string $dateDebut, string $dateFin) {
+
+
+}
