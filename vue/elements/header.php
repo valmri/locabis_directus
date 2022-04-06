@@ -4,20 +4,32 @@
             <a href="?page=accueil">Locabis</a>
         </span>
         <nav class="navigation">
-            <ul>
-                <?php if (!estConnecte()) :?>
-                <li>
-                    <a class="boutonMenu" href="?page=connexion">Connexion</a>
-                </li>
-                <?php else :?>
+
+            <div class="boutonNavigations">
+                <ul>
                     <li>
-                        <a class="boutonMenu" href="?page=membre">Espace membre</a>
+                        <a class="boutonMenu" href="?page=accueil">Accueil</a>
                     </li>
+                </ul>
+            </div>
+
+            <div class="boutonConnecte">
+                <ul>
+                    <?php if (!estConnecte()) :?>
                     <li>
-                        <a class="boutonMenu" href="?page=deconnexion">Déconnexion</a>
+                        <a class="boutonMenu" href="?page=connexion">Connexion</a>
                     </li>
-                <?php endif; ?>
-            </ul>
+                    <?php else :?>
+                        <li>
+                            <a class="boutonMenu" href="?page=membre">Espace membre</a>
+                        </li>
+                        <li>
+                            <a class="boutonMenu" href="?page=deconnexion">Déconnexion</a>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+            
         </nav>
     </div>
 </header>

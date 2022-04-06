@@ -24,7 +24,14 @@ h1 {
     color : #fff;
 }
 
-.navigation > ul {
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.boutonNavigations > ul,
+.boutonConnecte > ul {
     display: flex;
     list-style: none;
 }
