@@ -119,4 +119,11 @@ h1 {
     border: 1px solid #241F14;
     justify-content: center;
     text-decoration: none;
+    color: #000;
+}
+
+.bouton:hover {
+    background-color: gray;
+    transition: 0.5s;
+    color: #fff;
 }
