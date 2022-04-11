@@ -17,7 +17,7 @@
                     <?php if ($laLocation->idimm->ascensseur) : ?>
                     <p><span class="titreInfo">Ascenseur :</span> Oui</p>
                     <?php else : ?>
-                        <p><span class="titreInfo">Ascenseur :</span> Non</p>
+                    <p><span class="titreInfo">Ascenseur :</span> Non</p>
                     <?php endif; ?>
 
                     <?php if (estConnecte()) :?>
@@ -32,7 +32,11 @@
         <div class="page">
 
             <div class="entetePage">
-                <img src="http://172.24.2.143:8055/assets/<?php echo $laLocation->image ?>" width="50%" alt="<?php echo $laLocation->idtype->libtype; ?>">
+            <?php if ($laLocation->image != null) :?>
+            <img src="http://172.24.2.143:8055/assets/<?php echo $laLocation->image ?>?width=342&height=222" alt="<?php echo $laLocation->idtype->libtype ?>">
+            <?php else :?>
+            <img src="./assets/img/appart.jpg" width="50%" alt="<?php echo $laLocation->idtype->libtype; ?>">
+            <?php endif; ?>
                 <h1><?php echo $laLocation->idtype->libtype; ?></h1>
             </div>
 

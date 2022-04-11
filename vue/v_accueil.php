@@ -34,7 +34,7 @@
                 <div class="carteLoc">
                     <div class="carteLoc_entete">
                         <?php if ($laLocation->image != null) :?>
-                        <img src="http://172.24.2.143:8055/assets/<?php echo $laLocation->image ?>?width=400&height=300" alt="<?php echo $laLocation->idtype->libtype ?>">
+                        <img src="http://172.24.2.143:8055/assets/<?php echo $laLocation->image ?>?width=342&height=222" alt="<?php echo $laLocation->idtype->libtype ?>">
                         <?php else :?>
                         <img src="./assets/img/appart.jpg" width="100%" alt="<?php echo $laLocation->idtype->libtype; ?>">
                         <?php endif; ?>

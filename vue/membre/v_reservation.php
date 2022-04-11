@@ -32,14 +32,23 @@
                 <h1>Reservation</h1>
             </div>
 
+            <?php if (isset($msgErreur)) :?>
+            <div class="msgErreur">
+                <i class="las la-exclamation-triangle"></i>
+                <p><?php echo $msgErreur; ?></p>
+            </div>
+            <?php endif; ?>
+
             <div class="contenuPage">
 
                 <form action="#" method="post">
                     <label for="dateDebut">Date de début :</label>
-                    <input type="date" name="dateDebut" id="dateDebut" required><br>
+                    <input type="date" name="dateDebut" id="dateDebut" required>
+                    <input type="time" name="heureDebut" id="heureDebut" required><br>
 
                     <label for="dateFin">Date de fin :</label>
-                    <input type="date" name="dateFin" id="dateFin" required><br>
+                    <input type="date" name="dateFin" id="dateFin" required>
+                    <input type="time" name="heureFin" id="heureFin" required><br>
 
                     <button type="submit">Réserver</button>
                 </form>
