@@ -3,7 +3,7 @@
 function connexion(string $identifiant, string $motDePasse) {
 
     $resultat = false;
-    $infosUtilisateur = requete("http://172.24.2.143:8055/items/utilisateur?fields=identifiant,motDePasse&[filter][identifiant][_eq]=".$identifiant);
+    $infosUtilisateur = requete("http://172.24.2.143:8055/items/utilisateur?fields=id,identifiant,motDePasse&[filter][identifiant][_eq]=".$identifiant);
 
     if(!empty($infosUtilisateur->data)) {
 
@@ -12,7 +12,10 @@ function connexion(string $identifiant, string $motDePasse) {
 
         if ($identifiant ===  $identifiantUtilisateur && password_verify($motDePasse, $mdpUtilisateur)) {
 
-            $resultat = true;
+            $resultat = array(
+                "connecte" => true,
+                "id" => $infosUtilisateur->data[0]->id,
+            );
     
         }
 
