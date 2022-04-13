@@ -15,15 +15,6 @@ if(estConnecte()) {
     
         // Récupération des informations de la location
         $laLocation = getLocationById($idLocation);
-    
-        if($laLocation) {
-            require_once './vue/membre/v_reservation.php';
-        } else {
-            $titreErreur = "Location innexistante !";
-            $msgErreur = "La location recherché est innexistante ou a été retiré.";
-            require_once './vue/elements/erreur.php';
-        }
-
 
         if(
             isset($_POST['dateDebut']) &&
@@ -51,8 +42,21 @@ if(estConnecte()) {
                 "date_fin" => $dateFin.'T'.$heureFin.':00'
             );
 
-           add("reservation", $donnees);
+            try {
+                add("reservaion", $donnees);
+                $msgInfo = "Réservation effectuée avec succès !";
+            } catch (Exception $e) {
+                $msgErreur = "Erreur lors de la réservation.";
+            }
 
+        }
+
+        if($laLocation) {
+            require_once './vue/membre/v_reservation.php';
+        } else {
+            $titreErreur = "Location innexistante !";
+            $msgErreur = "La location recherché est innexistante ou a été retiré.";
+            require_once './vue/elements/erreur.php';
         }
     
     } else {

@@ -14,7 +14,7 @@ if(isset($_GET['n']) && !empty($_GET['n']) && is_numeric($_GET['n'])) {
 $nbLocations = getNombreLocations();
 
 // Définition du nombre de page
-$locationParPage = 6;
+$locationParPage = 9;
 $pages = ceil($nbLocations->total_count/$locationParPage);
 
 // Calcul première page
