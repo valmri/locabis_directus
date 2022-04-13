@@ -105,14 +105,21 @@ h1 {
     line-height: 10px;
 }
 
-.msgErreur {
+.message {
     display: flex;
     align-items: center;
     border: 1px solid #241F14;
     margin: 10px 0px;
     padding: 5px;
-    background-color: rgb(172, 25, 25);
     color: #fff;
+}
+
+.msgErreur {
+    background-color: rgb(172, 25, 25);
+}
+
+.msgInfo {
+    background-color: rgb(25, 172, 74);
 }
 
 .titreInfo {
