@@ -10,7 +10,8 @@ if(estConnecte()) {
 
     // Récupération des réservations
     $reservations = getReservations($_SESSION['id']);
-    var_dump($reservations);
+
+    $nbCase = 0;
 
     require_once './vue/membre/v_membre.php';
 } else {
