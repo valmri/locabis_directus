@@ -8,6 +8,10 @@ if(estConnecte()) {
     $dateConnexion = strtotime($infos->derniere_connexion);
     $derniereConnexion = date('d/m/Y H:m', $dateConnexion);
 
+    // Récupération des réservations
+    $reservations = getReservations($_SESSION['id']);
+    var_dump($reservations);
+
     require_once './vue/membre/v_membre.php';
 } else {
     require_once './controleur/c_connexion.php';

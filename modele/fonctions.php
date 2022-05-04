@@ -94,3 +94,9 @@ function add(string $collection, array $donnees) {
     return $resultat;
 
 }
+
+function getReservations(int $idUtilisateur) {
+    $recherche = "http://172.24.2.143:8055/items/reservation?[filter][utilisateur][_eq]=".$idUtilisateur;
+    $resultat  = requete($recherche);
+    return $resultat;
+}
