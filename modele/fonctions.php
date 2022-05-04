@@ -100,3 +100,9 @@ function getReservations(int $idUtilisateur) {
     $resultat  = requete($recherche);
     return $resultat->data;
 }
+
+function getDatesReservations(int $reservation) {
+    $recherche = "http://172.24.2.143:8055/items/reservation?fields=date_debut,date_fin&[filter][appartement.id][_eq]=".$reservation;
+    $resultat = requete($recherche);
+    return $resultat->data;
+}

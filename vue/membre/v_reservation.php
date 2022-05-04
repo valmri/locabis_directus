@@ -1,4 +1,4 @@
-<body>
+<body onload="constructionCalendrier(<?php echo $idLocation; ?>)">
 
     <div class="contenu">
 

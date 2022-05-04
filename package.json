@@ -1,0 +1,22 @@
+{
+  "name": "locabis",
+  "version": "1.0.0",
+  "description": "Bibliothèques pour le projet Locabis",
+  "main": "index.php",
+  "scripts": {
+    "test": "Coucou"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valmri/locabis_directus.git"
+  },
+  "author": "Valentin Marmié",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valmri/locabis_directus/issues"
+  },
+  "homepage": "https://github.com/valmri/locabis_directus#readme",
+  "dependencies": {
+    "flatpickr": "^4.6.13"
+  }
+}

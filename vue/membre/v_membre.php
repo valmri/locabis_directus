@@ -40,7 +40,10 @@
                             <i class="las la-map-marker"></i><?php echo $reservation->appartement->idimm->ville; ?>
                         </span><br>
                         <span class="infoLoca">
-                            <i class="las la-map-marker"></i><?php echo $reservation->date_debut; ?>
+                            <i class="las la-calendar"></i><?php echo date('d/m/Y H:m',strtotime($reservation->date_debut)); ?>
+                        </span><br>
+                        <span class="infoLoca">
+                            <i class="las la-calendar"></i><?php echo date('d/m/Y H:m',strtotime($reservation->date_fin)); ?>
                         </span>
                         <a href="?page=location&id=<?php echo $reservation->appartement->id; ?>" class="bouton">Consulter</a>
                     </div>
