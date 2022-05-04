@@ -43,7 +43,7 @@ if(estConnecte()) {
             );
 
             try {
-                add("reservaion", $donnees);
+                add("reservation", $donnees);
                 $msgInfo = "Réservation effectuée avec succès !";
             } catch (Exception $e) {
                 $msgErreur = "Erreur lors de la réservation.";

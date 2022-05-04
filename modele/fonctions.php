@@ -96,7 +96,7 @@ function add(string $collection, array $donnees) {
 }
 
 function getReservations(int $idUtilisateur) {
-    $recherche = "http://172.24.2.143:8055/items/reservation?fields=id,appartement.id,appartement.idtype.libtype,date_debut,appartement.idimm.ville&[filter][utilisateur][_eq]=".$idUtilisateur;
+    $recherche = "http://172.24.2.143:8055/items/reservation?fields=id,appartement.id,appartement.idtype.libtype,date_debut,date_fin,appartement.idimm.ville&[filter][utilisateur][_eq]=".$idUtilisateur;
     $resultat  = requete($recherche);
     return $resultat->data;
 }
