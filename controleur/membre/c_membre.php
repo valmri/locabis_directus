@@ -4,7 +4,8 @@ if(estConnecte()) {
     require_once './vue/elements/header.php';
 
     // Récupération des infos utilisateurs 
-    $infos = getInfosUtilisateur($_SESSION['identifiant']);
+    $infos = getInfosUtilisateur($_SESSION['id']);
+
     $dateConnexion = strtotime($infos->derniere_connexion);
     $derniereConnexion = date('d/m/Y H:m', $dateConnexion);
 

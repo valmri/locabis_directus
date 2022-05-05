@@ -27,6 +27,7 @@
             </div>
 
             <?php if($reservations != null) :?>
+            <h3>Vos réservations :</h3>
             <?php foreach ($reservations as $reservation) :?>
 
             <?php if ($nbCase === 0) :?>
