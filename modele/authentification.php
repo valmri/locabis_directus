@@ -2,11 +2,15 @@
 
 function connexion(string $identifiant, string $motDePasse) {
 
-    $infosUtilisateur = requete("http://172.24.2.143:8055/items/utilisateur?fields=id,identifiant,motDePasse&[filter][identifiant][_eq]=".$identifiant);
-    
+    $resultat = array(
+        "connecte" => false
+    );
+
+    $infosUtilisateur = requete("http://172.24.2.143:8055/items/utilisateur?fields=id,mel,motDePasse&[filter][mel][_eq]=".$identifiant);
+
     if(!empty($infosUtilisateur->data)) {
 
-        $identifiantUtilisateur = $infosUtilisateur->data[0]->identifiant;
+        $identifiantUtilisateur = $infosUtilisateur->data[0]->mel;
         $mdpUtilisateur = $infosUtilisateur->data[0]->motDePasse;
 
         if ($identifiant ===  $identifiantUtilisateur && password_verify($motDePasse, $mdpUtilisateur)) {
@@ -18,10 +22,6 @@ function connexion(string $identifiant, string $motDePasse) {
     
         }
 
-    } else {
-        $resultat = array(
-            "connecte" => false
-        );
     }
 
     return $resultat;
@@ -33,19 +33,19 @@ function estConnecte() {
     $resultat = false;
 
     if (
-        isset($_SESSION['identifiant']) &&
+        isset($_SESSION['mel']) &&
         isset($_SESSION['motDePasse']) &&
         isset($_SESSION['jeton'])
     ) {
 
-        $identifiant = $_SESSION['identifiant'];
+        $identifiant = $_SESSION['mel'];
         $motDePasse = $_SESSION['motDePasse'];
     
-        $infosUtilisateur = requete("http://172.24.2.143:8055/items/utilisateur?fields=identifiant,motDePasse&[filter][identifiant][_eq]=".$identifiant);
+        $infosUtilisateur = requete("http://172.24.2.143:8055/items/utilisateur?fields=mel,motDePasse&[filter][mel][_eq]=".$identifiant);
 
         if(!empty($infosUtilisateur->data)) {
 
-            $identifiantUtilisateur = $infosUtilisateur->data[0]->identifiant;
+            $identifiantUtilisateur = $infosUtilisateur->data[0]->mel;
             $mdpUtilisateur = $infosUtilisateur->data[0]->motDePasse;
 
             if ($identifiant ===  $identifiantUtilisateur && password_verify($motDePasse, $mdpUtilisateur)) {

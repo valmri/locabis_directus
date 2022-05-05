@@ -21,7 +21,7 @@ if(
 
         session_start();
         $_SESSION['id'] = $autorisationConnexion['id'];
-        $_SESSION['identifiant'] = $identifiant;
+        $_SESSION['mel'] = $identifiant;
         $_SESSION['motDePasse'] = $motDePasse;
         $_SESSION['jeton'] = bin2hex(openssl_random_pseudo_bytes(6));
         
