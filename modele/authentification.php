@@ -2,9 +2,8 @@
 
 function connexion(string $identifiant, string $motDePasse) {
 
-    $resultat = false;
     $infosUtilisateur = requete("http://172.24.2.143:8055/items/utilisateur?fields=id,identifiant,motDePasse&[filter][identifiant][_eq]=".$identifiant);
-
+    
     if(!empty($infosUtilisateur->data)) {
 
         $identifiantUtilisateur = $infosUtilisateur->data[0]->identifiant;
@@ -19,6 +18,10 @@ function connexion(string $identifiant, string $motDePasse) {
     
         }
 
+    } else {
+        $resultat = array(
+            "connecte" => false
+        );
     }
 
     return $resultat;
