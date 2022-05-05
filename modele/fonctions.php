@@ -106,3 +106,17 @@ function getDatesReservations(int $reservation) {
     $resultat = requete($recherche);
     return $resultat->data;
 }
+
+function verifDates(int $idAppart, string $datedebut, string $datefin) {
+    $recherche="http://172.24.2.143:8055/items/reservation?%5Bfilter%5D%5Bappartement%5D%5B_eq%5D=".$idAppart."&%5Bfilter%5D%5Bdate_debut%5D%5B_eq%5D=".$datedebut."&%5Bfilter%5D%5Bdate_fin%5D%5B_eq%5D=".$datefin;
+    $resultat = requete($recherche);
+    
+    if(empty($resultat->data)) {
+        $resultat = true;
+    } else {
+        $resultat = false;
+    }
+
+    return $resultat;
+    
+}

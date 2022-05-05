@@ -42,12 +42,22 @@ if(estConnecte()) {
                 "date_fin" => $dateFin.'T'.$heureFin.':00'
             );
 
-            try {
-                add("reservation", $donnees);
-                $msgInfo = "Réservation effectuée avec succès !";
-            } catch (Exception $e) {
-                $msgErreur = "Erreur lors de la réservation.";
+            // Vérification date de réservation
+            $verifDates = verifDates($donnees['appartement'],$donnees['date_debut'],$donnees['date_fin']);
+
+            if($verifDates) {
+                $succes = add("reservation", $donnees);
+
+                if($succes) {
+                    $msgInfo = "Réservation effectuée avec succès !";
+                } else {
+                    $msgErreur = "Erreur lors de la réservation.";
+                }
+                
+            } else {
+                $msgErreur = "Date déjà réservée.";
             }
+            
 
         }
 
